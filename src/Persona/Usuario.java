@@ -1,24 +1,23 @@
 package Persona;
 
 import java.security.Timestamp;
-
 public class Usuario {
     private int id;
     private String contrasena;
-    private String nombres;
-    private String apellidos;
-    private Timestamp nacimiento;
+    private String FirstName;
+    private String LastName;
+    private Timestamp dob;
 
     // Constructor
     public Usuario(int id, String contrasena, String nombres, String apellidos, Timestamp nacimiento) {
         this.id = id;
         this.contrasena = contrasena;
-        this.nombres = nombres;
-        this.apellidos = apellidos;
-        this.nacimiento = nacimiento;
+        this.FirstName = nombres;
+        this.LastName = apellidos;
+        this.dob = nacimiento;
     }
 
-    // Getters y setters
+    // Getter y setter específico para Usuario
     public int getId() {
         return id;
     }
@@ -27,37 +26,36 @@ public class Usuario {
         this.id = id;
     }
 
+    public Timestamp getDob() {
+        return dob;
+    }
+
+    public void setDob(Timestamp nacimiento) {
+        this.dob = nacimiento;
+    }
+
     public String getContrasena() {
         return contrasena;
     }
 
-    public void setContrasena(String contrasena) {
+    public void setContrasena(String contrasena) { 
         this.contrasena = contrasena;
     }
 
-    public String getNombres() {
-        return nombres;
+    public String getFirstName() {
+        return FirstName;
     }
 
-    public void setNombres(String nombres) {
-        this.nombres = nombres;
+    public void setFirstName(String nombres) {
+        this.FirstName = nombres;
     }
 
-    public String getApellidos() {
-        return apellidos;
+    public String getLastName() {
+        return LastName;
     }
 
-    public void setApellidos(String apellidos) {
-        this.apellidos = apellidos;
+    public void setLastName(String apellidos) {
+        this.LastName = apellidos;
     }
 
-    public Timestamp getNacimiento() {
-        return nacimiento;
-    }
-
-    public void setNacimiento(Timestamp nacimiento) {
-        this.nacimiento = nacimiento;
-    }
 }
-
-
